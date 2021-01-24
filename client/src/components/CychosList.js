@@ -1,4 +1,5 @@
 import Cycho from './Cycho';
+import CychoMap from './CychoMap';
 
 
 function CychosList({cychos}){
@@ -14,6 +15,13 @@ function CychosList({cychos}){
         return (
             <>
                 {displayCychos}
+                <div className ="cycho-map">
+                    <CychoMap
+                    cychos={cychos}
+                    // updatedCycho={updatedCycho}
+                    />
+
+                </div>
             </>
         )
 }

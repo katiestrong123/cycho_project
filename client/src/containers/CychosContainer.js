@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react';
-import CychosList from '../components/CychosList'
-import Cycho from '../components/Cycho'
-import {getCychos} from './CychosService'
+import CychosList from '../components/CychosList';
+import Cycho from '../components/Cycho';
+import {getCychos} from './CychosService';
+import CychoMap from '../components/CychoMap';
 
 
 function CychosContainer () {
