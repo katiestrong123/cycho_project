@@ -1,8 +1,8 @@
 function Header () {
     return (
         <>
-            <h1 className="app-name"> Cycho </h1>
-            <p>Repair costs and ques making you crazy? Let cheap, easy fixes come to you.</p>
+            <img className="logo" src="./static/cychoLogo.png" />
+            <p>Cycle repairs to your made easy. Find a cycho, book a slot. </p>
         </>
     );
 };

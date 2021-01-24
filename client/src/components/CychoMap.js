@@ -7,12 +7,13 @@ import PopupInfo from './PopupInfo';
 
 const CychoMap = ({cychos}) => {
 
+    
     const [currentLocation, setCurrentLocation] = 
     useState({lat: 51.50692026886317, lng: -0.20728327780658687});
     const [zoom, setZoom] = useState(14);
     const markerIcon = L.icon({
-        iconUrl: "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png",
-        iconSize: [35, 35]
+        iconUrl: "./static/cycon.png",
+        iconSize: [45, 45]
     });
 
     const cychoMarkers = cychos.map((popupInfo, index) => {

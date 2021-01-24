@@ -4,6 +4,7 @@ import Cycho from '../components/Cycho';
 import {getCychos} from './CychosService';
 import CychoMap from '../components/CychoMap';
 import CychoForm from '../components/CychoForm';
+import ImageUploader from '../components/ImageUploader';
 
 
 function CychosContainer () {
@@ -41,8 +42,10 @@ function CychosContainer () {
     return (
         <>
             <CychosList cychos={cychos} 
+           
             //handleCychoSelector= {handleCychoSelector}
             />
+             <ImageUploader />
         </>
     )
 }
