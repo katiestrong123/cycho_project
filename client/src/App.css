@@ -1,15 +1,22 @@
-
 .leaflet-container {
-  height: 300px;
-  width: 100vh;
-  margin-bottom: 10px;
+  height: 350px;
+  width: 100%;
 }
 
+.cycho-photo {
+  width: 200px;
+  height: 200px;
+}
+
+.popup-photo {
+  width: 150px;
+  height: 150px;
+}
 .popup >p{
   font-size: 200px;
 }
 
 .cycho-map {
-  height: 300px;
-  width: 100vh;
+  height: 350px;
+  width: 100vw;
 }

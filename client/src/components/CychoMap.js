@@ -3,6 +3,7 @@ import { Popup, MapContainer as Map, TileLayer, Marker } from 'react-leaflet'
 import Cycho from './Cycho';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import PopupInfo from './PopupInfo';
 
 const CychoMap = ({cychos}) => {
 
@@ -14,18 +15,17 @@ const CychoMap = ({cychos}) => {
         iconSize: [35, 35]
     });
 
-    const cychoMarkers = cychos.map((cycho, index) => {
+    const cychoMarkers = cychos.map((popupInfo, index) => {
         return (
             <>
                 <Marker 
                     key={index}
-                    position={[cycho.lat, cycho.lng]}
-                    title={cycho.name}
+                    position={[popupInfo.lat, popupInfo.lng]}
+                    title={popupInfo.name}
                     icon={markerIcon} >
                         <Popup className='popup'>
-                            <Cycho
-                            cycho={cycho}/>
-
+                            <PopupInfo
+                            popupInfo={popupInfo}/>
                         </Popup>
                 </Marker>
             </>
@@ -34,7 +34,6 @@ const CychoMap = ({cychos}) => {
 
   return (
       <>
-        <h4>This is the map component</h4>
         <Map center={currentLocation} zoom={zoom}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

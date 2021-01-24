@@ -8,6 +8,9 @@ const Cycho = ({cycho}) => {
     
             return (
                 <>
+                    <div className="cycho-photo-section">
+                        <img className="cycho-photo" src={cycho.photoUrl} alt={cycho.name} />
+                    </div>
                     <h5>{cycho.name}, {cycho.age}</h5>
                     <h5>Security number: {cycho.cychoSecurityCode}</h5>
                     <h5>{cycho.instagram}</h5>
