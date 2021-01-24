@@ -1,6 +1,6 @@
-const baseURL = 'http://localhost:3000/api/cychos/'
+const baseURL = 'http://localhost:3000/api/cychos/';
  
-export const getCychos = () =>{
+export const getCychos = () => {
     return fetch(baseURL)
     .then(res => res.json())
 }
@@ -10,10 +10,11 @@ export const getCychos = () =>{
 
 //rating, like uber would be an average out of 5 stars.
 export const updateDbCycho = (cycho) => {
-    return fetch(baseURL, {
+    return fetch(baseURL + cycho._id, {
         method: 'POST',
-        body: JSON.stringify(payload),
-        headers: { 'Content-Type': 'application/json'
+        body: JSON.stringify(cycho),
+        headers: { 
+            'Content-Type': 'application/json'
         }
     })
     .then(res => res.json());

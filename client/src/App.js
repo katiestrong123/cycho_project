@@ -1,8 +1,11 @@
 import './App.css';
+import CychosContainer from './containers/CychosContainer';
 
 function App() {
   return (
-    <h4>Helloooooo wolrd!!! </h4>
+      <>
+      <CychosContainer/>
+      </>
   );
 }
 

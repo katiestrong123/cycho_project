@@ -10,10 +10,10 @@ app.use(cors());
  
 MongoClient.connect("mongodb://localhost:27017")
 .then((client) => {
-const db = client.db('database_name');
-const thingCollection = db.collection("collection_name");
-const thingRouter = createRouter(thingCollection);
-app.use('/api/things', thingRouter);
+const db = client.db('cycho_bike_repair');
+const cychoCollection = db.collection('cychos');
+const cychoRouter = createRouter(cychoCollection);
+app.use('/api/cychos', cychoRouter);
 })
 .catch(console.error);
  

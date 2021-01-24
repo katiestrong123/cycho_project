@@ -1,20 +1,22 @@
 import Cycho from './Cycho';
-import CychoMap from './CychoMap'
 
 
+function CychosList({cychos}){
 
-function CychoList ({cychos}) {
-    if(!cychos) return null;
-
-    const displayCychos = cychos.map(cycho => {
-
+    const displayCychos = cychos.map((cycho) => {
         return (
             <Cycho
             cychos={cychos}
             cycho={cycho}
-            />
-        )
+            />) 
     })
+
+        return (
+            <>
+                {displayCychos}
+            </>
+        )
 }
 
-export default CychoList;
+
+export default CychosList;
