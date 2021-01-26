@@ -12,7 +12,6 @@ function PopupInfo ({ popupInfo, updatePopupInfo}) {
     return (
         <>
         <div className='popup-listing'>
-            <img className='popup-photo' src={popupInfo.photoUrl} alt={popupInfo.name}/>
             <h3>{popupInfo.name}</h3>
             <p>{popupInfo.location}</p>
             <hr></hr>
