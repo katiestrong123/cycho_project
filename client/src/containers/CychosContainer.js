@@ -3,13 +3,15 @@ import CychosList from '../components/CychosList';
 import Cycho from '../components/Cycho';
 import {getCychos} from './CychosService';
 import CychoMap from '../components/CychoMap';
-import CychoForm from '../components/CychoForm';
+import CychoFilterForm from '../components/CychoFilterForm';
 import ImageUploader from '../components/ImageUploader';
+import Footer from '../components/Footer';
 
 
 function CychosContainer () {
     const[cychos, setCychos] = useState([]);
-    const[filtereCychos, setFilteredCychos] = useState([]);
+    const[filteredCychos, setFilteredCychos] = useState([]);
+    const[locatedCychos, setLocatedCychos] = useState([]);
     const[cychoSelector, setCychoSelector] = useState("");
     useEffect(() => {
         getCychos()
@@ -17,35 +19,54 @@ function CychosContainer () {
             console.log(data)
             setCychos(data)
             setFilteredCychos(data)
+            setLocatedCychos(data)
         })
     }, [])
 
+
+
+
     const handleUserFilter = (userInput) => {
         const someCychos = cychos.filter((currentCycho) => {
-            if (cychoSelector ==='name') {
-                if (currentCycho.hasOwnProperty('year')) {
+            if (cychoSelector ==="name") {
+                if (currentCycho.hasOwnProperty("year")) {
                     return currentCycho[cychoSelector].toString().toUppoerCase().includes(userInput.toUppoerCase());
                 }
-                else if (cychoSelector === "") {
+            } else if (cychoSelector === "") {
                     return currentCycho;
                 } else {
                     return currentCycho[cychoSelector].toUppoerCase().includes(userInput.toUppoerCase());
                 };
-            }
+            
         });
         setFilteredCychos(someCychos);
     };
 
-    // const handleCychoSelector = 
+    const handleCychoSelector = (userInput) => {
+        setCychoSelector(userInput);
+    };
 
+    const handleLocationSelector = (userInput) => {
+        const foundCychos = cychos.filter((currentCycho) => {
+            if (locatedCychos ==="location") {
+                if (currentCycho.hasOwnProperty("location")) {
+                    return currentCycho
+                }
+            }
+        })
+        setLocatedCychos(foundCychos)
+    }
 
     return (
         <>
             <CychosList cychos={cychos} 
-           
-            //handleCychoSelector= {handleCychoSelector}
+            handleUserFilter={handleUserFilter}
+            handleCychoSelector= {handleCychoSelector}
+            handleLocationSelector = {handleLocationSelector}
+            murals={filteredCychos}
+            murals={locatedCychos}
             />
-             <ImageUploader />
+            <Footer/>            
         </>
     )
 }

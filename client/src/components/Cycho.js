@@ -1,3 +1,4 @@
+import './Cycho.css';
 
 const Cycho = ({cycho}) => {
   
@@ -8,14 +9,20 @@ const Cycho = ({cycho}) => {
     
             return (
                 <>
-                    <div className="cycho-photo-section">
-                        <img className="cycho-photo" src={cycho.photoUrl} alt={cycho.name} />
+                    <div className="cycho-listing">
+                        <div className="cycho-photo-section">
+                            <img className="cycho-photo" src={cycho.photoUrl} alt={cycho.name} />
+                        </div>
+                        <div className="cycho-text">
+                            <h4 className="cycho-title">{cycho.name}, {cycho.age}</h4>
+                            <h5>Security number: {cycho.cychoSecurityCode}</h5>
+                            <h5>{cycho.instagram}</h5>
+                            <h5>Based in {cycho.location}</h5>
+                            <p className="cycho-bio">{cycho.bio}</p>
+                            <p>Repairs: {cycho.skills}</p>
+
+                        </div>
                     </div>
-                    <h5>{cycho.name}, {cycho.age}</h5>
-                    <h5>Security number: {cycho.cychoSecurityCode}</h5>
-                    <h5>{cycho.instagram}</h5>
-                    <h5>Base shop: {cycho.baseLocation}</h5>
-                    <p>{cycho.bio}</p>
                 </>
             )
 }

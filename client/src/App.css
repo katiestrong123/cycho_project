@@ -1,26 +1,9 @@
-.leaflet-container {
-  height: 350px;
-  width: 100%;
+.footer {
+  background-color: rgb(44, 47, 49);
+  margin-top: 0;
 }
 
-.cycho-photo {
-  width: 200px;
-  height: 200px;
-}
-
-.popup-photo {
-  width: 150px;
-  height: 150px;
-}
-.popup >p{
-  font-size: 200px;
-}
-
-.cycho-map {
-  height: 350px;
-  width: 100vw;
-}
-
-.img {
-  width: 300px;
+.footer-content {
+  text-align: center;
+  color: white;
 }

@@ -4,9 +4,9 @@ import Cycho from './Cycho';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import PopupInfo from './PopupInfo';
+import './CychoMap.css';
 
 const CychoMap = ({cychos}) => {
-
     
     const [currentLocation, setCurrentLocation] = 
     useState({lat: 51.50692026886317, lng: -0.20728327780658687});
@@ -35,7 +35,7 @@ const CychoMap = ({cychos}) => {
 
   return (
       <>
-        <Map center={currentLocation} zoom={zoom}>
+        <Map center={currentLocation} zoom={zoom} className="cycho-map">
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
