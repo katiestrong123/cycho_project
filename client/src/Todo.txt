@@ -1,0 +1,9 @@
+✅ Setup redux - manage our application State 
+✅ Setup Chat  
+✅ Setup reducers and action 
+✅ Chat Queue 
+✅ Display the messages to the user 
+✅ Get and handle session_ids
+7.Handle sending our users message to the application
+8.Adding but responses to the queue
+9.Formatting 
