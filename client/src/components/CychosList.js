@@ -4,15 +4,19 @@ import CychoForm from './CychoFilterForm';
 import Header from '../components/Header';
 import CychoFilterForm from '../components/CychoFilterForm';
 
-function CychosList({cychos, handleCychoSelector, handleUserFilter, handleLocationSelector}){
+function CychosList({cychos, handleUserFilter}){
+    // if(!cychos) return null;
 
-    const displayCychos = cychos.map((cycho) => {
-        return (
+    const displayCychos = cychos.map(cycho => {
+        return(
             <Cycho
             cychos={cychos}
             cycho={cycho}
-            />) 
+            />
+        )
     })
+
+    
 
     const toggleDisplay = () => {
         if (cychos.length === 0) {
@@ -25,16 +29,12 @@ function CychosList({cychos, handleCychoSelector, handleUserFilter, handleLocati
                 <div className ="cycho-map">
                     <CychoMap
                     cychos={cychos}
-                    // updatedCycho={updatedCycho}
                     />
                 </div>
                 <Header/>
                 {toggleDisplay()}
                 <div>
-                    <CychoFilterForm onUserInput = {handleUserFilter}
-                                     onUserSelect = {handleCychoSelector}
-                                     onLocationSelect = {handleLocationSelector}
-                        />
+                    <CychoFilterForm onUserInput = {handleUserFilter}/>
                 </div>
                 <div className="display-cychos">
                     {displayCychos}
