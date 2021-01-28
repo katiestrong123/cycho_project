@@ -20,11 +20,9 @@ function CychosContainer () {
         })
     }, [])
 
-
-
     const handleUserFilter = (userInput) => {
         const someCychos = cychos.filter((currentCycho) => {
-            return currentCycho.name.toUppoerCase().includes(userInput.toUppoerCase());
+            return currentCycho.name.toUpperCase().includes(userInput.toUpperCase());
         })
         setFilteredCychos(someCychos);
     }
@@ -33,7 +31,7 @@ function CychosContainer () {
         <>
             <CychosList
             handleUserFilter={handleUserFilter}          
-            murals={filteredCychos}
+            cychos={filteredCychos}
             />
             <Footer/>            
         </>

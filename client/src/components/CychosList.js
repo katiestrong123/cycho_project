@@ -5,8 +5,8 @@ import Header from '../components/Header';
 import CychoFilterForm from '../components/CychoFilterForm';
 
 function CychosList({cychos, handleUserFilter}){
-    // if(!cychos) return null;
-
+    if(!cychos) return null;
+    
     const displayCychos = cychos.map(cycho => {
         return(
             <Cycho
