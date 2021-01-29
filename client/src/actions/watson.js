@@ -33,6 +33,7 @@ export const createSession = () => async (dispatch) => {
         dispatch({type:SESSION_FAIL})
     }
 }
+
 //Send a message to the bot 
 
 export const sendMessage = (message) => async (dispatch) => {

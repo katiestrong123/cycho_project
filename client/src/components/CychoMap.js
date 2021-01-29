@@ -12,8 +12,8 @@ const CychoMap = ({cychos}) => {
     useState({lat: 51.50692026886317, lng: -0.20728327780658687});
     const [zoom, setZoom] = useState(14);
     const markerIcon = L.icon({
-        iconUrl: "./static/cycon.png",
-        iconSize: [45, 45]
+        iconUrl: "./static/marker-turquoise.png",
+        iconSize: [35, 42]
     });
 
     const cychoMarkers = cychos.map((popupInfo, index) => {
@@ -36,7 +36,7 @@ const CychoMap = ({cychos}) => {
   return (
       <>
         <Map center={currentLocation} zoom={zoom} className="cycho-map">
-            <TileLayer
+            <TileLayer className="map-tile"
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
