@@ -1,12 +1,6 @@
 import {useState, useEffect} from 'react';
 import CychosList from '../components/CychosList';
-import Cycho from '../components/Cycho';
 import {getCychos} from './CychosService';
-import CychoMap from '../components/CychoMap';
-import CychoFilterForm from '../components/CychoFilterForm';
-import ImageUploader from '../components/ImageUploader';
-import Footer from '../components/Footer';
-
 
 function CychosContainer () {
     const[cychos, setCychos] = useState([]);
@@ -32,8 +26,7 @@ function CychosContainer () {
             <CychosList
             handleUserFilter={handleUserFilter}          
             cychos={filteredCychos}
-            />
-            <Footer/>            
+            />          
         </>
     )
 }

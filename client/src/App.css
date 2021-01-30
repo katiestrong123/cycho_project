@@ -3,3 +3,12 @@
   min-width: 150px;
   max-width: 150px;
 }
+
+.about-info {
+  padding: 40px;
+}
+
+.about-title {
+  text-align: center;
+  padding-bottom: 40px;
+}

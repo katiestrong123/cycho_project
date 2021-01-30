@@ -1,0 +1,18 @@
+.header-section{
+    padding-top: 310px;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height: 130px;
+}
+.slogan {
+    text-align: center;
+}
+
+.not-crazy {
+    text-align: center;
+}

@@ -1,6 +1,6 @@
 import App from '../App';
 import {Component} from 'react';
-import './ImageUploader.css';
+import './css/ImageUploader.css';
 
 export class ImageUploader extends Component {
   state={

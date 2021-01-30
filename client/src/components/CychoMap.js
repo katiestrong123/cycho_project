@@ -1,10 +1,9 @@
 import {useState} from 'react';
 import { Popup, MapContainer as Map, TileLayer, Marker } from 'react-leaflet'
-import Cycho from './Cycho';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import PopupInfo from './PopupInfo';
-import './CychoMap.css';
+import './css/CychoMap.css';
 
 const CychoMap = ({cychos}) => {
     
@@ -13,7 +12,7 @@ const CychoMap = ({cychos}) => {
     const [zoom, setZoom] = useState(14);
     const markerIcon = L.icon({
         iconUrl: "./static/marker-turquoise.png",
-        iconSize: [35, 42]
+        iconSize: [35, 45]
     });
 
     const cychoMarkers = cychos.map((popupInfo, index) => {

@@ -1,4 +1,4 @@
-import './CychoForm.css';
+import './css/CychoForm.css';
 import ImageUploader from './ImageUploader';
 
 

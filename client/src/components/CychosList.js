@@ -1,7 +1,4 @@
 import Cycho from './Cycho';
-import CychoMap from './CychoMap';
-import CychoForm from './CychoFilterForm';
-import Header from '../components/Header';
 import CychoFilterForm from '../components/CychoFilterForm';
 
 function CychosList({cychos, handleUserFilter}){
@@ -15,9 +12,7 @@ function CychosList({cychos, handleUserFilter}){
             />
         )
     })
-
     
-
     const toggleDisplay = () => {
         if (cychos.length === 0) {
             console.log("cychos", cychos)
@@ -26,12 +21,6 @@ function CychosList({cychos, handleUserFilter}){
     };
         return (
                 <>
-                <div className ="cycho-map">
-                    <CychoMap
-                    cychos={cychos}
-                    />
-                </div>
-                <Header/>
                 {toggleDisplay()}
                 <div>
                     <CychoFilterForm onUserInput = {handleUserFilter}/>
@@ -42,6 +31,5 @@ function CychosList({cychos, handleUserFilter}){
             </>
         )
 }
-
 
 export default CychosList;

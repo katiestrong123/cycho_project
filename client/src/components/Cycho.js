@@ -1,4 +1,4 @@
-import './Cycho.css';
+import './css/Cycho.css';
 
 const Cycho = ({cycho}) => {
   

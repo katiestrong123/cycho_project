@@ -1,0 +1,26 @@
+.leaflet-container {
+    height: 250px;
+    width: 100%;
+    position: fixed;
+    top: 60px;
+  }
+  
+.popup-photo {
+    width: 150px;
+    height: 120px;
+    border-radius: 6%;
+}
+
+.popup >p{
+    font-size: 200px;
+}
+  
+.cycho-map {
+    height: 250px;
+    width: 100vw;
+}
+
+.map-tile {
+    filter: grayscale(0.5);
+}
+
