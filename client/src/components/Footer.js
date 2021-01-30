@@ -32,12 +32,36 @@ function Footer () {
 
                         <input className="footer-subscribe" type="submit" value="SUBSCRIBE"></input>
                     </div>
-                    <div className="footer-links">
-                        <h4>CYCHOS</h4>
-                        <h4>EAR FOOD</h4>
-                        <h4>CONTACT</h4>
-                        <h4>07758 135 514</h4>
-                        <h4>ABOUT</h4>
+                    <div className="footer-nav">
+                        <ul>
+                            <l>
+                                <a
+                                className="footer-links"
+                                href="location">L  O  C  A  T  I  O  N</a>
+                            </l> 
+                            <br></br>
+                            <br></br>
+                            <l>
+                                <a
+                                className="footer-links"
+                                href="cychos">C  Y  C  H  O  S</a>
+                            </l>
+                            <br></br>
+                            <br></br>
+                            <l>
+                                <a
+                                className="footer-links"
+                                href="about">A  B  O  U  T </a>
+                            </l>
+                            <br></br>
+                            <br></br>
+                            
+                        </ul>                
+                        <h4>C O N T A C T</h4>
+                        <h4>0 7 7 5 8 1 3 5 5 1 4</h4>
+                    
+
+
                     </div>
 
                     <footer>&copy; Copyright 2021 Cycho London</footer>
