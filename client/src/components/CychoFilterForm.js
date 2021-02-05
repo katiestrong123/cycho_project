@@ -11,22 +11,21 @@ const CychoFilterForm = ({ onUserInput}) => {
     };
 
 return (
-  
-
-    //here could be 3 images, bicycle, electric, skate = if bicycle is selected, list all cychos with bicycles specialiaty etc. 
 
     //can also has a location attribute, west london, east london, south london, central london,
 
 //   <option value="name">Cycho by location </option> with a select of these locations.
 <>
-     <ImageUploader />
-    <div className="picture-butotns">
+     {/* these buttons dont do anything yet, code filter */}
+    <div className="filter-buttons">
         <form>
-            <input Name="electric-repair" type="image" src="./static/electric-repair.jpeg" height="150px"/>
-            <input Name="bike-repair" type="image" src="./static/bike-repair.jpeg" height="150px"/>
-            <input Name="skate-repair" type="image" src="./static/skate-repair.jpeg" height="150px"/>
+            <button Name="bike-repair" type="button" className="three-buttons"    > B I C Y C L E </button>
+            <button Name="electric-repair" type="button" className="three-buttons" >E L E C T R I C</button>
+            <button Name="skate-repair" type="button" className="three-buttons"  > S K A T E S </button>
         </form>
     </div>
+
+    {/* Need to seprate form. Search bar only on the cychos page. The button sleect on home page */}
         <div className="cycho-filter-section">
             <div className="cycho-filter">
                 <span className="cycho-filer-title">Search cycho... </span>
@@ -36,6 +35,8 @@ return (
                         id="cycho-input"/>
                 </div>
             </div>
+
+            <ImageUploader />
     </>
     )
 

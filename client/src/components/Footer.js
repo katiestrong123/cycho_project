@@ -28,10 +28,10 @@ function Footer () {
                         </section>
 
                 {/* onClick, value= "" */}
-
-
                         <input className="footer-subscribe" type="submit" value="SUBSCRIBE"></input>
                     </div>
+
+                    
                     <div className="footer-nav">
                         <ul>
                             <l>
@@ -53,13 +53,12 @@ function Footer () {
                                 className="footer-links"
                                 href="about">A  B  O  U  T </a>
                             </l>
-                            <br></br>
-                            <br></br>
+                        <l>
+                        <h4>C O N T A C T</h4>   
+                        </l>
                             
                         </ul>                
-                        <h4>C O N T A C T</h4>
-                        <h4>0 7 7 5 8 1 3 5 5 1 4</h4>
-                    
+                                        
 
 
                     </div>

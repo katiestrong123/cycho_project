@@ -18,6 +18,7 @@
 .cycho-map {
     height: 250px;
     width: 100vw;
+    opacity: 90%;
 }
 
 .map-tile {

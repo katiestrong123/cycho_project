@@ -2,17 +2,17 @@
    text-align: center;
 }
 
-.img-holder {
-    text-align: center;
-}
-  
 .img {
     width: 120px;
     border: solid rgb(175, 167, 167) 1px;
     border-radius: 4%;
+    margin: 10px;
 
 }
-.image-upload {
-    text-align: center;
+
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 12pt;
 }
-  
